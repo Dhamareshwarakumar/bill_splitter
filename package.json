@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "build": "npm run build --prefix frontend",
     "install_frontend": "npm install --prefix frontend",
-    "frontend": "npm start --prefix frontend"
+    "frontend": "npm start --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install_frontend && npm run build"
   },
   "keywords": [
     "iNeuron",
