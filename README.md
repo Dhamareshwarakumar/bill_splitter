@@ -39,4 +39,9 @@ Suppose you are going on a vacation with your friends and you guys needs to shar
 
 ## Installation
 
--   Goto `https://github.com/Dhamareshwarakumar/bill_splitter.git`
+-   `git clone https://github.com/Dhamareshwarakumar/bill_splitter.git`
+-   `cd bill_splitter`
+-   `npm install`
+-   `npm run install_frontend`
+-   `npm run build`
+-   `npm run start`

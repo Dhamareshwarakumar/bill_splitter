@@ -3,3 +3,87 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  /* background: radial-gradient(circle at top left, #E1A2B8, #9F2BC1); */
+  background: #CAD5E2;
+}
+
+/* Navbar */
+.navbar {
+  padding: 2px 0;
+  height: 6vh;
+}
+
+/* footer */
+footer {
+  background: #35BDD0;
+  height: 6vh;
+}
+
+
+/* Home */
+#home {
+  height: 88vh;
+}
+
+.home_info_container {
+  background-color: #383CC1;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.home_grp_item {
+  background-color: #3944F7;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 150px;
+  cursor: pointer;
+}
+
+.home_grp_item i {
+  font-size: 2rem;
+}
+
+.home_chart {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.home_expenditure {
+  background-color: #3944F7;
+  border-radius: 10px;
+  color: #fff;
+  min-height: 50px;
+}
+
+
+.test {
+  max-height: 88vh;
+}
+
+.home_expenditures_container {
+  height: 48vh;
+  overflow-y: scroll;
+}
+
+.home_groups_container {
+  max-height: 48vh;
+  overflow-y: scroll;
+}
+
+.mostly-customized-scrollbar {
+  scrollbar-width: none;   
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #CAD5E2; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #777;
+  border-radius: 20px;
+}
