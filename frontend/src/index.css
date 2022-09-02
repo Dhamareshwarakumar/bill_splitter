@@ -12,7 +12,12 @@ body {
 /* Navbar */
 .navbar {
   padding: 2px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
   height: 6vh;
+  }
 }
 
 /* footer */
@@ -25,6 +30,12 @@ footer {
 /* Home */
 #home {
   height: 88vh;
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+  height: auto;
+  }
 }
 
 .home_info_container {
@@ -63,8 +74,15 @@ footer {
 }
 
 .home_expenditures_container {
-  height: 48vh;
+  max-height: 48vh;
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  .home_expenditures_container {
+   height: 45vh;
+   margin-bottom: 10px;
+  }
 }
 
 .home_groups_container {

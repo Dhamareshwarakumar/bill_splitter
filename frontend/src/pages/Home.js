@@ -1,6 +1,9 @@
 import React from 'react';
 
 import DonutChart from '../components/DonutChart';
+import ExpenditureItem from '../components/ExpenditureItem';
+import GroupItem from '../components/GroupItem';
+import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
     const data = {
@@ -33,79 +36,26 @@ const Home = () => {
     return (
         <section id="home">
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-md-6">
-                        <div className="row mb-5 pb-5 justify-content-center">
-                            <div className="col-10 col-md-6 my-3 p-3 home_info_container">
-                                <div className="row align-items-stretch">
-                                    <div className="col-4 text-center">
-                                        $400 <br />
-                                        <b>Will Pay</b>
-                                    </div>
-                                    <div className="col-4 text-center">
-                                        $400 <br />
-                                        <b>Will Get</b>
-                                    </div>
-                                    <div className="col-4 text-center">
-                                        $400 <br />
-                                        <b>Balance</b>
-                                    </div>
-                                </div>
-                            </div>
+                <div className="row align-items-center gap-5">
+                    <div className="col-md-5">
+                        <div className="row mb-5 pb-mb-5 justify-content-center">
+                            <HomeInfo willPay="400" willGet="200" balance="200" />
                         </div>
                         <div className="row gap-1 gap-md-4 justify-content-around home_groups_container mostly-customized-scrollbar align-items-start">
                             <div className="col-3 text-center home_grp_item py-2">
                                 Add Group <br />
                                 <i class="bi bi-person-plus-fill"></i>
                             </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 1 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 2 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 3 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 4 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            {/* <div className="col-3 text-center home_grp_item py-2">
-                                Group 5 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 6 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 7 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 8 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 9 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 10 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 11 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Group 12 <br />
-                                <i class="bi bi-people-fill"></i>
-                            </div> */}
+                            <GroupItem name="Group 1" />
+                            <GroupItem name="Group 2" />
+                            <GroupItem name="Group 3" />
+                            <GroupItem name="Group 4" />
+                            <GroupItem name="Group 5" />
+                            {/* <GroupItem name="Group 6" />
+                            <GroupItem name="Group 7" />
+                            <GroupItem name="Group 8" />
+                            <GroupItem name="Group 9" />
+                            <GroupItem name="Group 10" /> */}
                         </div>
 
                     </div>
@@ -116,126 +66,18 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="row gap-2 mt-4 justify-content-center home_expenditures_container mostly-customized-scrollbar">
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-10 home_expenditure py-1">
-                                <div className="row px-3 py-1 justify-content-between">
-                                    <div className="col-auto">$400</div>
-                                    <div className="col-auto">2022/9/1</div>
-                                </div>
-                                <div className="row px-3 py-1">
-                                    <div className="col-auto badge rounded-pill text-bg-warning">Category</div>
-                                    <div className="col-auto">
-                                        Description of the expenditure
-                                    </div>
-                                </div>
-                            </div>
+                            <ExpenditureItem amount="140" date="2022/9/1" category="Food" description="Shawarma at The Shawarma Company Eluru" />
+                            <ExpenditureItem amount="150" date="2022/9/1" category="Movies" description="Liger Movie at Satyanarya Cinemas Eluru" />
+                            <ExpenditureItem amount="689" date="2022/9/1" category="Bills" description="Home Electricity Bill" />
+                            <ExpenditureItem amount="18" date="2022/9/1" category="Others" description="Printout, Family Medicare Form from Riktam" />
+                            <ExpenditureItem amount="50" date="2022/9/1" category="Others" description="Type C OTG for Macbook" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
+                            <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
                         </div>
                     </div>
                 </div>
