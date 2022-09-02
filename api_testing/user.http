@@ -1,0 +1,50 @@
+
+@PORT = 3333
+
+@TOKEN = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJuYW1lIjoiRGhhbWFyZXNod2FyYWt1bWFyIEdhbmRpa290YSIsImVtYWlsIjoiZGFtYXJlc2h3YXJha3VtYXJAZ21haWwuY29tIiwibW9iaWxlIjoiNzY2MTk3OTk0MyIsImlhdCI6MTY2MjEzMDcwNiwiZXhwIjoxNjYyMTM0MzA2fQ.4sOxn0H6StUv6Fsy1IPRmKDxhxYGUwN0kAF2lfCerR8
+
+
+# # Create new user
+# POST http://127.0.0.1:{{PORT}}/api/users
+# Content-Type: application/json
+
+# {
+#     "name": "Adarsh Badagala",
+#     "email": "badarsh2001@gmail.com",
+#     "password": "password",
+#     "mobile": "9999999999"
+# }
+
+
+# # Get All Users
+# GET http://127.0.0.1:{{PORT}}/api/users
+
+
+# # Get user by mobile number
+# GET http://127.0.0.1:{{PORT}}/api/users/8795462135
+
+
+# # Delete an user
+# DELETE http://127.0.0.1:{{PORT}}/api/users/9999999999
+# Authorization: {{TOKEN}}
+
+
+# # User login
+# POST http://127.0.0.1:{{PORT}}/api/users/login
+# Content-Type: application/json
+
+
+# {
+#     "mobile": "7661979943",
+#     "password": "password"
+# }
+
+
+# # Update User
+# PUT http://127.0.0.1:{{PORT}}/api/users/9999999999
+# Content-Type: application/json
+# Authorization: {{TOKEN}}
+
+# {
+#     "name": "Dhamareshwarakumar"
+# }
