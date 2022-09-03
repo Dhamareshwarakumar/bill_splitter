@@ -9,7 +9,7 @@ body {
   background: #CAD5E2;
 }
 
-/* Navbar */
+/* ----------------------------- Navbar ----------------------------- */
 .navbar {
   padding: 2px 0;
 }
@@ -27,7 +27,7 @@ footer {
 }
 
 
-/* Home */
+/* ----------------------------- Home ----------------------------- */
 #home {
   height: 88vh;
 }
@@ -97,11 +97,41 @@ footer {
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #CAD5E2; /* or add it to the track */
+  background-color: #CAD5E2; 
 }
 
-/* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
   background: #777;
   border-radius: 20px;
+}
+
+/* ----------------------------- Login ----------------------------- */
+.login_page_divider {
+  width: 50vw;
+  min-height: 88vh;
+  position: absolute;
+  background-color: rgba(108, 99, 255, 0.7);
+}
+
+.login_landing {
+  min-height: 88vh;
+  padding: 15px;
+}
+
+.login_landing_card {
+  max-width: 1080px;
+  min-height: 55vh;
+  margin: auto;
+  padding: 25px;
+  position: relative;
+}
+
+.login_landing_card_main {
+  min-height: 45vh;
+}
+
+@media (max-width: 576px) {
+  .login_heading {
+      font-size: 2.2rem;
+  }
 }

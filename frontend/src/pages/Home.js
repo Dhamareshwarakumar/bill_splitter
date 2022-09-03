@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import DonutChart from '../components/DonutChart';
 import ExpenditureItem from '../components/ExpenditureItem';
 import GroupItem from '../components/GroupItem';
 import HomeInfo from '../components/HomeInfo';
 
-const Home = () => {
+const Home = props => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!props.auth.isAuthenticated) {
+            navigate('/login');
+        }
+    }, []);
+
     const data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [
@@ -44,7 +54,7 @@ const Home = () => {
                         <div className="row gap-1 gap-md-4 justify-content-around home_groups_container mostly-customized-scrollbar align-items-start">
                             <div className="col-3 text-center home_grp_item py-2">
                                 Add Group <br />
-                                <i class="bi bi-person-plus-fill"></i>
+                                <i className="bi bi-person-plus-fill"></i>
                             </div>
                             <GroupItem name="Group 1" />
                             <GroupItem name="Group 2" />
@@ -86,4 +96,9 @@ const Home = () => {
     )
 }
 
-export default Home
+
+const mapStateToProps = store => ({
+    auth: store.auth
+});
+
+export default connect(mapStateToProps, null)(Home)

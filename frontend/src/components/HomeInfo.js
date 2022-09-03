@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeInfo = ({ willPay, willGet, balance }) => {
     return (
-        <div className="col-10 col-md-6 my-3 p-3 home_info_container">
+        <div className="col-10 col-lg-6 my-3 p-3 home_info_container">
             <div className="row align-items-stretch">
                 <div className="col-4 text-center">
                     ${willPay} <br />
