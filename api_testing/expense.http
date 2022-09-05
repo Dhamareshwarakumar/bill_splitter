@@ -1,0 +1,31 @@
+@PORT = 3333
+
+@TOKEN = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTFjNWI4MjM4YzdiZTQzZTJkNzI4NSIsInJvbGUiOjEsIm5hbWUiOiJEaGFtYXJlc2h3YXJha3VtYXIiLCJlbWFpbCI6ImRhbWFyZXNod2FyYWt1bWFyQGdtYWlsLmNvbSIsIm1vYmlsZSI6Ijc2NjE5Nzk5NDMiLCJpYXQiOjE2NjIzNTMxODQsImV4cCI6MTY2MjM1Njc4NH0.htxchy-plIXQmRZEdJ1-2n41UjRiXzKfRW4PfHZ40II
+
+
+# # User login
+# POST http://127.0.0.1:{{PORT}}/api/users/login
+# Content-Type: application/json
+
+
+# {
+#     "mobile": "7661979943",
+#     "password": "password"
+# }
+
+
+# POST http://127.0.0.1:{{PORT}}/api/expenses
+# Content-Type: application/json
+# Authorization: {{TOKEN}}
+
+# {
+#     "groupId": "63132b5eb80b2bd84b5dbb9d",
+#     "description": "Petrol at Hyderabad",
+#     "category": "Travel",
+#     "amount": 900,
+#     "paidBy": "6311c5b8238c7be43e2d7285"
+# }
+
+
+GET http://127.0.0.1:{{PORT}}/api/expenses/group/63132b5eb80b2bd84b5dbb9d
+Authorization: {{TOKEN}}

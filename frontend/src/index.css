@@ -16,7 +16,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .navbar {
-  height: 6vh;
+    height: 6vh;
   }
 }
 
@@ -34,7 +34,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   #home {
-  height: auto;
+    height: auto;
   }
 }
 
@@ -48,7 +48,7 @@ footer {
   background-color: #3944F7;
   border-radius: 10px;
   color: #fff;
-  max-width: 150px;
+  max-width: 300px;
   cursor: pointer;
 }
 
@@ -80,8 +80,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   .home_expenditures_container {
-   height: 45vh;
-   margin-bottom: 10px;
+    height: 45vh;
+    margin-bottom: 10px;
   }
 }
 
@@ -91,13 +91,13 @@ footer {
 }
 
 .mostly-customized-scrollbar {
-  scrollbar-width: none;   
+  scrollbar-width: none;
 }
 
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #CAD5E2; 
+  background-color: #CAD5E2;
 }
 
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
@@ -132,6 +132,102 @@ footer {
 
 @media (max-width: 576px) {
   .login_heading {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
+}
+
+
+/* ------------ Member ------------ */
+.member-card {
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  border-bottom: 7px solid #0091ff;
+}
+
+.member-card:hover {
+  background-color: #0091ff;
+  border-bottom: 10px solid #3944F7;
+  color: #fff;
+}
+
+.floating-button {
+  position: fixed;
+  top: 80px;
+  right: 80px;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+  .floating-button {
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+  }
+}
+
+.floating-button i {
+  font-size: 50px;
+  color: #E62662;
+}
+
+
+.expense-item {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  border-bottom: 10px solid #0091ff;
+}
+
+.expense-item:hover {
+  background-color: #0091ff;
+  border-bottom: 10px solid #3944F7;
+  color: #fff;
+}
+
+/* .expense-item>.row {
+  height: 200px;
+} */
+
+.expense-amount-container {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  color: #000;
+}
+
+.details {
+  border-radius: 10px;
+}
+
+.details-header {
+  border-radius: 10px 10px 0 0;
+}
+
+.details-body-pills {
+  border-radius: 7px;
+  border: 1px solid #0091ff;
+}
+
+.details-body-pills:hover {
+  background-color: #0091ff;
+  color: #fff;
+}
+
+.accordian {
+  background-color: blue;
+}
+
+.pending-payment {
+  border-radius: 10px;
+}
+
+.grpMember:hover {
+  cursor: pointer;
 }

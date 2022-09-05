@@ -1,0 +1,31 @@
+@PORT = 3333
+
+@TOKEN = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTFjNWI4MjM4YzdiZTQzZTJkNzI4NSIsInJvbGUiOjEsIm5hbWUiOiJEaGFtYXJlc2h3YXJha3VtYXIiLCJlbWFpbCI6ImRhbWFyZXNod2FyYWt1bWFyQGdtYWlsLmNvbSIsIm1vYmlsZSI6Ijc2NjE5Nzk5NDMiLCJpYXQiOjE2NjIzODQwMzYsImV4cCI6MTY2MjM4NzYzNn0.eSrLhibAN35bly5dEmLgW2LcMjHIIya_hRtd5077J4o
+
+
+# # User Login
+# POST http://127.0.0.1:{{PORT}}/api/users/login
+# Content-Type: application/json
+
+# {
+#     "mobile": "7661979943",
+#     "password": "password"
+# }
+
+
+# Get Transaction Details
+GET http://127.0.0.1:{{PORT}}/api/transactions/group/6315e21b220884a8e54546b5
+Authorization: {{TOKEN}}
+
+
+# # Add a Transaction
+# POST http://127.0.0.1:{{PORT}}/api/transactions
+# Authorization: {{TOKEN}}
+# Content-Type: application/json
+
+# {
+#     "groupId": "63132b5eb80b2bd84b5dbb9d",
+#     "from": "6311f86392ad1c3c9dd3b62d",
+#     "to": "6311c5b8238c7be43e2d7285",
+#     "amount": 1095
+# }

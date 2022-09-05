@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
+import Group from './pages/Group';
 
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/login" element={<Login />} />
 				<Route exact path="/logout" element={<Logout />} />
+				<Route exact path="/group/:groupId" element={<Group />} />
 			</Routes>
 			<Footer />
 		</Provider>

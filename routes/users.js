@@ -21,6 +21,7 @@ router.get(
             .then(users => {
                 if (users.length) {
                     return res.json(users.map(user => ({
+                        id: user._id,
                         name: user.name,
                         email: user.email,
                         mobile: user.mobile,
@@ -146,6 +147,7 @@ router.post(
                 if (user) {
                     if (user.authenticate(req.body.password)) {
                         const payload = {
+                            id: user._id,
                             role: user.role,
                             name: user.name,
                             email: user.email,

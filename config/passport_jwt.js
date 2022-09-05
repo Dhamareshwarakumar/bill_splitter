@@ -17,6 +17,7 @@ module.exports = passport => {
                 .then(resUser => {
                     if (resUser) {
                         const user = {
+                            id: resUser._id,
                             role: resUser.role,
                             name: resUser.name,
                             email: resUser.email,

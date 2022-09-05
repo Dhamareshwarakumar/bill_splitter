@@ -1,20 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { getGroups } from '../actions/groupActions';
 
 import DonutChart from '../components/DonutChart';
 import ExpenditureItem from '../components/ExpenditureItem';
 import GroupItem from '../components/GroupItem';
 import HomeInfo from '../components/HomeInfo';
+import AddGroup from '../components/AddGroup';
 
 const Home = props => {
     const navigate = useNavigate();
+
+    const [myGroups, setMyGroups] = useState([]);
 
     useEffect(() => {
         if (!props.auth.isAuthenticated) {
             navigate('/login');
         }
+        props.getGroups();
     }, []);
+
+    useEffect(() => {
+        setMyGroups(props.groups)
+    }, [props.groups]);
 
     const data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -52,20 +61,15 @@ const Home = props => {
                             <HomeInfo willPay="400" willGet="200" balance="200" />
                         </div>
                         <div className="row gap-1 gap-md-4 justify-content-around home_groups_container mostly-customized-scrollbar align-items-start">
-                            <div className="col-3 text-center home_grp_item py-2">
-                                Add Group <br />
-                                <i className="bi bi-person-plus-fill"></i>
-                            </div>
-                            <GroupItem name="Group 1" />
-                            <GroupItem name="Group 2" />
-                            <GroupItem name="Group 3" />
-                            <GroupItem name="Group 4" />
-                            <GroupItem name="Group 5" />
-                            {/* <GroupItem name="Group 6" />
-                            <GroupItem name="Group 7" />
-                            <GroupItem name="Group 8" />
-                            <GroupItem name="Group 9" />
-                            <GroupItem name="Group 10" /> */}
+                            <AddGroup />
+                            {myGroups.length !== 0 && myGroups.map((group, index) => (
+                                // <div className="col-4 text-center home_grp_item py-2 border border-light">
+                                <Link to={`group/${group._id}`} style={{ textDecoration: 'none', color: "#fff" }} className="col-auto text-center home_grp_item py-2">
+                                    <GroupItem key={index} name={group.name} />
+                                </Link>
+                                // </div>
+
+                            ))}
                         </div>
 
                     </div>
@@ -98,7 +102,8 @@ const Home = props => {
 
 
 const mapStateToProps = store => ({
-    auth: store.auth
+    auth: store.auth,
+    groups: store.groups
 });
 
-export default connect(mapStateToProps, null)(Home)
+export default connect(mapStateToProps, { getGroups })(Home)
