@@ -27,7 +27,6 @@ const AddGroup = props => {
                 props.test();
                 handleClose();
                 props.getUsers();
-                navigate('/group/' + params.groupId)
                 alert('Member added successfully');
             })
             .catch(err => console.log(err));
