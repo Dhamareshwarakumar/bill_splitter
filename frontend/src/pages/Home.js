@@ -80,11 +80,11 @@ const Home = props => {
                             </div>
                         </div>
                         <div className="row gap-2 mt-4 justify-content-center home_expenditures_container mostly-customized-scrollbar">
-                            <ExpenditureItem amount="140" date="2022/9/1" category="Food" description="Shawarma at The Shawarma Company Eluru" />
-                            <ExpenditureItem amount="150" date="2022/9/1" category="Movies" description="Liger Movie at Satyanarya Cinemas Eluru" />
-                            <ExpenditureItem amount="689" date="2022/9/1" category="Bills" description="Home Electricity Bill" />
-                            <ExpenditureItem amount="18" date="2022/9/1" category="Others" description="Printout, Family Medicare Form from Riktam" />
-                            <ExpenditureItem amount="50" date="2022/9/1" category="Others" description="Type C OTG for Macbook" />
+                            <ExpenditureItem amount="140" date="2022/9/1" category="Food" description="Test 1" />
+                            <ExpenditureItem amount="150" date="2022/9/1" category="Movies" description="Test 2" />
+                            <ExpenditureItem amount="689" date="2022/9/1" category="Bills" description="Test 3" />
+                            <ExpenditureItem amount="18" date="2022/9/1" category="Others" description="Test 4" />
+                            <ExpenditureItem amount="50" date="2022/9/1" category="Others" description="Test 5" />
                             <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
                             <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
                             <ExpenditureItem amount="100" date="2022/9/1" category="Food" description="Description of the expenditure" />
