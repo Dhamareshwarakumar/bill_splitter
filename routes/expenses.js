@@ -7,6 +7,9 @@ const { validateExpense } = require('../validations/expenses');
 
 const Expense = require('../models/Expense');
 
+//adding another variable for simplicity
+const extra = require('../models/Extra');
+
 
 // Routes   :: GET /api/expenses/group/:id
 // Desc     :: Get all expenses in a group
