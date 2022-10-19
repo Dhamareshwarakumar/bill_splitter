@@ -1,6 +1,6 @@
 # Bill Splitter
 
--   Author: [Dhamareshwarakumar Gandikota](https://www.linkedin.com/in/dhamareshwarakumar/)
+-   Author: [Dhamareshwara kumar Gandikota](https://www.linkedin.com/in/dhamareshwarakumar/)
 
 ## Tech Stack
 
