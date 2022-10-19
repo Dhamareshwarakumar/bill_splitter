@@ -7,7 +7,8 @@ const passport = require('passport');
 
 // Middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// removed the line urlencoded as it is not necessary for this project
+// app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 
 
