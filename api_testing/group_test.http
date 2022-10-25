@@ -1,0 +1,52 @@
+@PORT = 3333
+
+@TOKEN = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTFjNWI4MjM4YzdiZTQzZTJkNzI4NSIsInJvbGUiOjEsIm5hbWUiOiJEaGFtYXJlc2h3YXJha3VtYXIiLCJlbWFpbCI6ImRhbWFyZXNod2FyYWt1bWFyQGdtYWlsLmNvbSIsIm1vYmlsZSI6Ijc2NjE5Nzk5NDMiLCJpYXQiOjE2NjIzNzc4NDgsImV4cCI6MTY2MjM4MTQ0OH0.oaGT7n-r0XJtR2ThSWRtWebvOq9zmINP-NZ3WVjDR4U
+
+# # User login
+# POST http://127.0.0.1:{{PORT}}/api/users/login
+# Content-Type: application/json
+
+
+# {
+#     "mobile": "7661979943",
+#     "password": "password"
+# }
+
+
+# Get groups logged user is a part of
+GET http://127.0.0.1:{{PORT}}/api/groups
+Authorization: {{TOKEN}}
+
+
+# POST http://127.0.0.1:{{PORT}}/api/groups
+# Content-Type: application/json
+# Authorization: {{TOKEN}}
+
+# {
+#     "name": "Test Trip",
+#     "members": ["6312f70110f92f5a685b62ec", "6311f86392ad1c3c9dd3b62d"]
+# }
+
+
+# PUT http://127.0.0.1:{{PORT}}/api/groups/add_members
+# Content-Type: application/json
+# Authorization: {{TOKEN}}
+
+# {
+#     "groupId": "631339a702e7385def8e138e",
+#     "members": ["6312f70110f92f5a685b62ec", "6311c5b8238c7be43e2d7285"]
+# }
+
+
+# PUT http://127.0.0.1:{{PORT}}/api/groups/remove_members
+# Content-Type: application/json
+# Authorization: {{TOKEN}}
+
+# {
+#     "groupId": "631339a702e7385def8e138e",
+#     "members": ["63123888596c30cb4ebdeef0", "6311f86392ad1c3c9dd3b62d"]
+# }
+
+
+# DELETE http://127.0.0.1:{{PORT}}/api/groups/631339a702e7385def8e138e
+# Authorization: {{TOKEN}}
